@@ -1,11 +1,10 @@
 import React from 'react'
 import './contact.css'
-import {BsFillWalletFill} from 'react-icons/bs'
 import {FaPhone,FaTelegramPlane} from 'react-icons/fa'
-import {AiOutlineMail} from 'react-icons/ai'
 import {FiMail} from 'react-icons/fi'
-import { useState ,useRef} from 'react'
 import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
+import { FaInstagram ,FaTwitter} from "react-icons/fa";
 import Swal from 'sweetalert2'
 const Contact = () => {
     
@@ -69,7 +68,7 @@ const Contact = () => {
                     <FiMail />
                 </div>
                 <div className="contact-card-text">
-                    <p>support@bloxvest.com</p>
+                    <a href='mailto:support@bloxvestorg.com' target='blank'>support@bloxvestorg.com</a>
                 </div>
             </div>
             <div className="contact-card" data-aos="fade-up">
@@ -77,7 +76,15 @@ const Contact = () => {
                     <FaTelegramPlane />
                 </div>
                 <div className="contact-card-text">
-                    <p>Join us on Telegram</p>
+                    <a href='https://t.me/Bloxvest' target='blank'>Join us on Telegram</a>
+                </div>
+            </div>
+            <div className="contact-card" data-aos="fade-up">
+                <div className="ball contact-ball">
+                    <FaInstagram />
+                </div>
+                <div className="contact-card-text">
+                    <a href='https://www.instagram.com/bloxvestorg?igshid=OGQ5ZDc2ODk2ZA==' target='blank'>Join us on Instagram</a>
                 </div>
             </div>
         </div>
