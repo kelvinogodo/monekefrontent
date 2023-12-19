@@ -1,0 +1,155 @@
+.landpage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1840' height='900' preserveAspectRatio='none' viewBox='0 0 1840 900'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1030%26quot%3b)' fill='none'%3e%3crect width='1840' height='900' x='0' y='0' fill='rgba(23%2c 63%2c 132%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c548.83C100.894%2c541.471%2c174.524%2c458.675%2c259.986%2c404.546C346.109%2c349.999%2c454.766%2c319.482%2c503.492%2c229.937C553.143%2c138.693%2c525.599%2c28.88%2c520.872%2c-74.89C515.619%2c-190.209%2c550.858%2c-324.584%2c474.299%2c-410.983C397.713%2c-497.413%2c256.528%2c-463.793%2c146.158%2c-497.767C33.814%2c-532.348%2c-63.228%2c-627.473%2c-179.794%2c-612.323C-300.887%2c-596.585%2c-415.824%2c-519.924%2c-480.465%2c-416.325C-542.418%2c-317.034%2c-514.242%2c-191.158%2c-515.601%2c-74.132C-516.78%2c27.327%2c-529.04%2c130.066%2c-487.889%2c222.812C-446.491%2c316.114%2c-370.427%2c387.624%2c-285.557%2c444.336C-199.54%2c501.815%2c-103.18%2c556.356%2c0%2c548.83' fill='%2312326a'%3e%3c/path%3e%3cpath d='M1840 1561.638C1973.696 1582.797 2119.413 1585.065 2235.085 1514.7640000000001 2351.669 1443.908 2406.728 1308.78 2461.578 1183.865 2515.73 1060.539 2553.268 932.588 2549.837 797.941 2546.087 650.785 2554.392 473.123 2441.071 379.169 2325.998 283.76199999999994 2152.34 352.625 2003.074 344.62 1891.595 338.64200000000005 1784.567 316.64200000000005 1675.007 338.08500000000004 1556.65 361.249 1438.828 394.568 1347.199 472.985 1246.902 558.819 1171.095 671.443 1136.589 798.865 1099.388 936.237 1069.5819999999999 1096.821 1145.6970000000001 1217.077 1221.254 1336.452 1391.314 1338.45 1517.864 1401.253 1627.533 1455.6779999999999 1719.074 1542.5 1840 1561.638' fill='%231c4c9e'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1030'%3e%3crect width='1840' height='900' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");    background-position: center;
+    position: relative;
+    padding-bottom: 100px;
+    background-repeat: no-repeat;
+}
+.landpage-content-wrapper{
+  position: relative;
+}
+.bg-svg{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+}
+
+.landpage-content-wrapper{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 70px;
+    margin: auto;
+}
+.landpage-text-container{
+    width: 45%;
+    align-self: flex-start;
+    text-align: left;
+    padding-left: 20px;
+}
+.landpage-text-container h1{
+    color:var(--primary-color);
+}
+.landpage-text-container p{
+    color: var(--mild-color);
+    margin-top: 20px;
+}
+.landpage-img-container{
+    width: 45%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landpage-img-container .phone{
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+.floating-container-img1,.floating-container-img2,.floating-container-img3{
+  position: absolute;
+  background-color: var(--secondary-color);
+  padding: 10px 30px;
+  width: auto;
+}
+.floating-container-img1{
+  object-fit: cover;
+  height: auto;
+  width: 280px;
+  top:0px;
+  right: 0px;
+  font-size: 1rem;
+}
+.floating-container-img2{
+  bottom: 0px;
+  right: -80px;
+}
+.floating-container-img3{
+  top: 50%;
+  transform: translateY(-50%);
+  height: 130px;
+  left: -30px;
+}
+  @media (max-width: 990px) and (min-width: 768px){
+    .landpage{
+        justify-content: center;
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0.841);
+    }
+      .landpage-content-wrapper{
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 20px 0px;
+      }
+      .landpage-text-container{
+        text-align: center;
+        width: 95%;
+        align-self: center;
+        padding-left: 0px;
+        text-align: left;
+      }
+      .launch-btn{
+        margin: 30px 0px;
+        align-self: flex-start;
+      }
+      .landpage-img-container{
+        margin-bottom: 50px;
+        width: 90%;
+      }
+      .floating-container-img3{
+        right: 10px;
+      }
+  }
+  @media screen and (max-width: 767px){
+    .landpage{
+      justify-content: center;
+      background-position: center;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='700' height='1440' preserveAspectRatio='none' viewBox='0 0 700 1440'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1064%26quot%3b)' fill='none'%3e%3crect width='700' height='1440' x='0' y='0' fill='rgba(4%2c 42%2c 112%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c568.974C103.364%2c549.714%2c193.336%2c494.081%2c274.832%2c427.647C349.255%2c366.979%2c388.042%2c279.809%2c447.354%2c204.3C528.787%2c100.629%2c700.744%2c32.268%2c688.504%2c-98.992C676.47%2c-228.039%2c486.9%2c-250.717%2c396.283%2c-343.381C313.403%2c-428.134%2c296.969%2c-591.462%2c181.346%2c-617.607C64.263%2c-644.082%2c-21.112%2c-497.975%2c-136.179%2c-463.784C-250.663%2c-429.766%2c-396.865%2c-500.974%2c-484.446%2c-419.775C-571.019%2c-339.511%2c-524.34%2c-194.231%2c-550.971%2c-79.218C-580.839%2c49.776%2c-691.13%2c171.044%2c-650.422%2c297.038C-609.711%2c423.041%2c-471.779%2c492.926%2c-349.61%2c544.004C-239.59%2c590.003%2c-117.231%2c590.818%2c0%2c568.974' fill='%23032157'%3e%3c/path%3e%3cpath d='M700 2005.914C823.907 2001.536 957.413 2069.6710000000003 1064.4180000000001 2007.046 1171.787 1944.208 1210.164 1807.998 1243.136 1688.042 1272.525 1581.119 1261.62 1471.199 1241.6860000000001 1362.117 1222.417 1256.673 1185.604 1159.107 1129.7559999999999 1067.615 1064.655 960.963 1005.367 839.406 891.3779999999999 788.228 772.633 734.915 629.359 739.757 508.796 788.82 392.894 835.986 312.04 941.211 249.341 1049.502 194.171 1144.789 177.75300000000004 1254.498 175.44100000000003 1364.58 173.34400000000005 1464.403 215.79000000000002 1553.952 236.695 1651.584 264.513 1781.499 213.115 1952.683 318.649 2033.394 421.976 2112.417 570 2010.507 700 2005.914' fill='%23053389'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1064'%3e%3crect width='700' height='1440' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  }
+    .landpage-content-wrapper{
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+    .landpage-text-container{
+      text-align: center;
+      width: 85%;
+      align-self: center;
+      padding-left: 0px;
+      text-align: left;
+    }
+    .landpage-text-container p{
+      margin: 30px 0px;
+      line-height: 22px;
+    }
+    .landpage-text-container h1{
+      font-size: 1.9rem;
+      color: white;
+      width: 100%;
+    }
+    .launch-btn{
+      margin: 40px 0px 0px 0px;
+    }
+    .bg-svg{
+      display: none;
+    }
+    .landpage-img-container{
+      width: 80%;
+      margin-top: 40px;
+    }
+    .floating-container-img1{
+      left: -10px;
+      width: 100%;
+    }
+    .floating-container-img3{
+      top: 170px;
+    }
+    .floating-container-img2{
+      left: -10px;
+    }
+  }

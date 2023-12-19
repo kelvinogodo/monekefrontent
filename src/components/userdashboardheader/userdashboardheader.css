@@ -1,0 +1,205 @@
+.userdashboard-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='1500' preserveAspectRatio='none' viewBox='0 0 1440 1500'%3e%3cg mask='url(%26quot%3b%23SvgjsMask2196%26quot%3b)' fill='none'%3e%3crect width='1440' height='1500' x='0' y='0' fill='url(%23SvgjsLinearGradient2197)'%3e%3c/rect%3e%3cpath d='M0 0L592.03 0L0 644.63z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 644.63L592.03 0L906.6099999999999 0L0 934.3399999999999z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 934.3399999999999L906.6099999999999 0L1140.9499999999998 0L0 1269.96z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 1269.96L1140.9499999999998 0L1229.1999999999998 0L0 1306.91z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1440 1500L1102.44 1500L1440 887.03z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1440 887.03L1102.44 1500L517.0400000000001 1500L1440 665.86z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1440 665.86L517.04 1500L407.84 1500L1440 536.57z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1440 536.57L407.8399999999999 1500L169.16999999999993 1500L1440 429.74000000000007z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask2196'%3e%3crect width='1440' height='1500' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='50%25' y1='100%25' x2='50%25' y2='0%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2197'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(1%2c 85%2c 179%2c 1)' offset='0'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-position: bottom;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 60px;
+}
+.header-profile-container{
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    border-radius: 4rem;
+    min-width: 10%;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.header-profile-container:hover{
+    background-color: rgba(0, 41, 122, 0.301);
+}
+.arrow-container{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    transition: .3s all ease-in-out;
+    margin-left:10px ;
+    color: #ddd;
+}
+.arrow-wrapper:hover{
+    box-shadow: 0px 0px rgb(205, 205, 205);
+    background-color: rgb(239, 239, 239);
+}
+.user-header-nav{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.user-header-nav ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.user-header-nav ul li a{
+    font-family: lato;
+}
+.user-header-nav ul li a:hover{
+    color: var(--color-variant);
+}
+.user-icon-wrapper{
+    background-color: #ddd;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.header-profile-container p{
+    font-size: .9rem;
+    color: #ddd;
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-family: lato;
+    letter-spacing: .5px;
+}
+.drop-down{
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    padding: 0px 0px 10px 0px;
+    width: 250px;
+    background-color: white;
+    z-index: 10;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.dropdown-header{
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.dropdown-user-details{
+    width: 80%;
+    padding: 5px;
+}
+.dropdown-email{
+    font-size: .8rem;
+    color: rgb(80, 80, 80);
+    text-align: left;
+    word-break: break-all;
+}
+.profile-pic-container{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.dropdown-name{
+    color: var(--secondary-color);
+    font-size: 1rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+.dropdown-deposit-container{
+    width: 100%;
+    padding: 10px 20px;
+    font-family: roboto;
+}
+.dropdown-deposit-container h3{
+    font-size: .9rem;
+    text-align: left;
+    font-family: roboto;
+}
+.dropdown-deposit-container h2{
+    font-size: 1.5rem;
+    margin: 6px 0px 6px 0px;
+    text-align: left;
+    font-weight: 400;
+    font-family: roboto;
+    color: rgba(17, 43, 209, 0.701);
+}
+.dropdown-deposit-container p{
+    font-size: .8rem;
+    text-transform: capitalize;
+    color: rgb(99, 99, 99);
+    text-align: left;
+}
+.mobile-tabs{
+    width: 100%;
+    display: none;
+}
+.dropdown-tabs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 1px #ddd;
+    cursor: pointer;
+}
+.dropdown-tabs p{
+    width: 90%;
+    font-size: .8rem;
+    color:rgb(99, 99, 99) ;
+    text-transform: capitalize;
+    text-align: left;
+}
+.dropdown-tabssvg{
+    font-size: 1rem;
+    color:rgba(17, 43, 209, 0.701);
+}
+.profile-pic-container img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+@media (max-width: 990px) and (min-width: 768px){
+    .user-header-nav{
+        display: none;
+    }
+    .mobile-tabs{
+        width: 100%;
+        display: block;
+    }
+}
+@media screen and (max-width: 767px){
+    .user-header-nav{
+        display: none;
+    }
+    .mobile-tabs{
+        width: 100%;
+        display: block;
+    }
+    .drop-down{
+        width: 90%;
+        overflow: auto;
+        height: 100vh;
+    }
+}

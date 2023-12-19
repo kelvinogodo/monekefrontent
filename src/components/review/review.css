@@ -1,0 +1,74 @@
+.review-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='1200' preserveAspectRatio='none' viewBox='0 0 1440 1200'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1061%26quot%3b)' fill='none'%3e%3crect width='1440' height='1200' x='0' y='0' fill='rgba(4%2c 42%2c 112%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c506.753C113.279%2c519.633%2c246.472%2c593.044%2c334.797%2c520.955C425.731%2c446.737%2c368.529%2c295.401%2c398.122%2c181.816C421.103%2c93.607%2c479.542%2c20.395%2c488.835%2c-70.284C500.196%2c-181.141%2c537.817%2c-319.199%2c457.369%2c-396.313C375.145%2c-475.129%2c232.832%2c-388.677%2c123.471%2c-420.504C14.538%2c-452.206%2c-58.405%2c-599.456%2c-169.977%2c-578.887C-279.137%2c-558.763%2c-304.181%2c-410.419%2c-378.491%2c-327.964C-454.802%2c-243.29%2c-605.488%2c-201.822%2c-612.34%2c-88.041C-619.33%2c28.023%2c-469.37%2c87.336%2c-409.505%2c187.015C-358.846%2c271.365%2c-366.754%2c389.452%2c-289.201%2c450.005C-210.169%2c511.713%2c-99.627%2c495.425%2c0%2c506.753' fill='%23032157'%3e%3c/path%3e%3cpath d='M1440 1642.422C1525.534 1642.1779999999999 1604.383 1611.754 1683.071 1578.225 1776.404 1538.4560000000001 1901.436 1522.225 1941.1689999999999 1428.876 1981.042 1335.198 1875.8890000000001 1239.781 1870.396 1138.118 1864.069 1021.024 1977.661 888.933 1906.942 795.392 1837.759 703.883 1685.059 772.065 1573.4850000000001 745.392 1469.877 720.623 1381.982 626.85 1276.975 644.789 1169.885 663.084 1100.004 761.935 1023.739 839.308 942.413 921.816 815.174 994.734 817.884 1110.5529999999999 820.672 1229.702 961.69 1291.491 1036.492 1384.276 1090.348 1451.079 1123.754 1533.373 1196.036 1579.616 1268.234 1625.805 1354.291 1642.667 1440 1642.422' fill='%23053389'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1061'%3e%3crect width='1440' height='1200' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    padding: 40px 0px;
+}
+.review-header h2{
+    color: white;
+    font-family: Open Sans,lato;
+}
+.investor-title{
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 8px;
+    font-size: .8rem;
+    font-family: lato,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.investor-name{
+    font-family: montserrat;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    margin-top: 5px;
+}
+.review-header span{
+    background-color: white;
+}
+.review-head-container h1{
+    color: var(--mild-color);
+}
+
+.review-swiper{
+    width: 100%;
+}
+.review-swiper-slide{
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+}
+.swiper-slide-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.swiper-slide-content svg:first-of-type{
+    font-size: 3rem !important;
+    display: block;
+    color: #999999 !important;
+    margin-right: auto;
+}
+.swiper-slide-content svg:last-of-type{
+    font-size: 3rem !important;
+    display: block;
+    color: #b5b5b5 !important;
+    margin-left: auto;
+}
+.swiper-slide-content p{
+    width: 70%;
+}
+.swiper-slide-content .review-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
