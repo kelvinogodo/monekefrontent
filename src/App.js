@@ -80,7 +80,7 @@ function App() {
             })
     }, 30000);
   
-    const route = 'http://localhost:5000'
+    const route = 'https://confused-wasp-glasses.cyclic.app'
   return (
     <>
     <AnimatePresence>
