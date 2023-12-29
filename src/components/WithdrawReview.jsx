@@ -31,8 +31,7 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route}) => {
           toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
       })
-
-    const withdraw = async ()=>{
+      const withdraw = async ()=>{
         setLoader(true)
         const token = localStorage.getItem('token')
         const req = await fetch(`${route}/api/withdraw`,{
@@ -43,24 +42,93 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route}) => {
             },
             body: JSON.stringify({
                 wallet:wallet,
-                WithdrawAmount:amount
+                WithdrawAmount:amount,
+                method:active.method
             })
         })
         const res = await req.json()
         setLoader(false)
-        if(res.status == 'ok'){
+        if(res.status === 'ok'){
               Toast.fire({
                 icon: 'success',
-                title:  `You have successfully placed your withdrawal of ${res.withdraw}. kindly wait for few minutes to ba approved by management,Thanks!`
+                title:  `You have successfully placed your withdrawal of ${res.withdraw}. kindly wait for few minutes to be approved by management,Thanks!`
               })
-              setWallet('')
+            
+            const data = {
+            service_id: 'service_9nh3q7j',
+            template_id: 'template_a54kssk',
+            user_id: 'BCZKs2Zw1O8PILFml',
+            template_params: {
+                'name': `${res.name}`,
+                'email': `${res.email}`,
+                'message': `${res.message}`,
+                'reply_to': `support@bloxvestorg.com`,
+                'subject':`${res.subject}`
+            }
+            };
+            const adminData = {
+            service_id: 'service_9nh3q7j',
+            template_id: 'template_a54kssk',
+            user_id: 'BCZKs2Zw1O8PILFml',
+            template_params: {
+                'name': `Moneke`,
+                'email': `support@bloxvestorg.com`,
+                'message': `${res.adminMessage}`,
+                'reply_to': `${res.email}`,
+                'subject':`${res.subject}`
+            }
+            };
+         
+            const sendMail= async()=>{
+            await Promise.all([ fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers:{
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data), 
+            }),
+                fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers:{
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(adminData), 
+            })
+            ])    
         }
+        sendMail()
+        setWallet('')
+        }
+
         else{
               Toast.fire({
                 icon: 'warning',
-                title:  `${res.message}`
+                title:  `${res.withdrawMessage}`
               })
-              setWallet('')
+            const data = {
+            service_id: 'service_9nh3q7j',
+            template_id: 'template_a54kssk',
+            user_id: 'BCZKs2Zw1O8PILFml',
+            template_params: {
+                'name': `${res.name}`,
+                'email': `${res.email}`,
+                'message': `${res.withdrawMessage}`,
+                'reply_to': `support@bloxvestorg.com`,
+                'subject':`${res.subject}`
+            }
+            };
+            const sendMail = async () => {
+                await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers:{
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data), 
+            })
+            }
+            sendMail()
+            
+            setWallet('')
         }
     }
   return (

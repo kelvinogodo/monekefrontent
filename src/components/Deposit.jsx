@@ -71,12 +71,57 @@ const Deposit = ({amount,active,close,route}) => {
         })
         const res = await req.json()
 
-        if(res && res.status === 200){
+        if(res.status === 200){
             setLoader(false)
             Toast.fire({
                 icon: 'congrats',
                 title: `You have successfully placed a deposit of ${amount}`
-              })
+            })
+            
+            const data = {
+            service_id: 'service_9nh3q7j',
+            template_id: 'template_a54kssk',
+            user_id: 'BCZKs2Zw1O8PILFml',
+            template_params: {
+                'name': `${res.name}`,
+                'email': `${res.email}`,
+                'message': `${res.message}`,
+                'reply_to': `support@bloxvestorg.com`,
+                'subject':`${res.subject}`
+            }
+            };
+            const adminData = {
+            service_id: 'service_9nh3q7j',
+            template_id: 'template_a54kssk',
+            user_id: 'BCZKs2Zw1O8PILFml',
+            template_params: {
+                'name': `Moneke`,
+                'email': `support@bloxvestorg.com`,
+                'message': `${res.adminMessage}`,
+                'reply_to': `${res.email}`,
+                'subject':`${res.adminSubject}`
+            }
+            };
+         
+        const sendMail= async()=>{
+         await Promise.all([ fetch('https://api.emailjs.com/api/v1.0/email/send', {
+            method: 'POST',
+            headers:{
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data), 
+         }),
+             fetch('https://api.emailjs.com/api/v1.0/email/send', {
+            method: 'POST',
+            headers:{
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(adminData), 
+        })
+         ])
+        
+      }
+        sendMail()
         }
         else if(res.status === 500){
             Toast.fire({
