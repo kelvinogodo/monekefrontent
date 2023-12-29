@@ -61,7 +61,6 @@ const Signup = ({route}) => {
             template_params: {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
-                'message': `${res.url}`
             }
         };
          
