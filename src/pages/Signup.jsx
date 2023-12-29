@@ -55,9 +55,9 @@ const Signup = ({route}) => {
         if(res.status === 'ok') { 
 
           const data = {
-            service_id: 'service_v5czqwf',
-            template_id: 'template_59tlurw',
-            user_id: 'n7xORYYpWoz9l5AvF',
+            service_id: 'service_9nh3q7j',
+            template_id: 'template_pzdai9c',
+            user_id: 'BCZKs2Zw1O8PILFml',
             template_params: {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
