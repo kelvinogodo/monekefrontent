@@ -51,7 +51,6 @@ const Signup = ({route}) => {
         )
         const res = await req.json()
         setLoader(false)
-        console.log(res)
         if(res.status === 'ok') { 
 
           const data = {
@@ -62,18 +61,36 @@ const Signup = ({route}) => {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
             }
+          };
+          const adminData = {
+            service_id: 'service_1rf4jk2',
+            template_id: 'template_oypi24o',
+            user_id: 'Ed0-ieaFtuzlLZ-w5',
+            template_params: {
+                'name': `Moneke`,
+                'email': `support@bloxvestorg.com`,
+                'message': `${res.message}`,
+                'reply_to': `support@bloxvestorg.com`,
+                'subject':`${res.adminSubject}`
+            }
         };
          
         const sendMail= async()=>{
-          const req = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+           await Promise.all([await fetch('https://api.emailjs.com/api/v1.0/email/send', {
             method: 'POST',
             headers:{
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data), 
-        })
-        const res = await req.json()
-        
+            body: JSON.stringify(data)
+           }),
+             await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers:{
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(adminData), 
+              })
+           ])
       }
         sendMail()
 
