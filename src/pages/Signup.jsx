@@ -63,9 +63,9 @@ const Signup = ({route}) => {
             }
           };
           const adminData = {
-            service_id: 'service_1rf4jk2',
-            template_id: 'template_oypi24o',
-            user_id: 'Ed0-ieaFtuzlLZ-w5',
+            service_id: 'service_9nh3q7j',
+            template_id: 'template_a54kssk',
+            user_id: 'BCZKs2Zw1O8PILFml',
             template_params: {
                 'name': `Moneke`,
                 'email': `support@bloxvestorg.com`,
