@@ -95,7 +95,7 @@ const Deposit = ({amount,active,close,route}) => {
             template_id: 'template_a54kssk',
             user_id: 'BCZKs2Zw1O8PILFml',
             template_params: {
-                'name': `Moneke`,
+                'name': `Bloxvest admin`,
                 'email': `support@bloxvestorg.com`,
                 'message': `${res.adminMessage}`,
                 'reply_to': `${res.email}`,
