@@ -80,7 +80,7 @@ function App() {
             })
     }, 30000);
   
-    const route = 'https://confused-wasp-glasses.cyclic.app'
+    const route = 'https://bloxvest.onrender.com'
   return (
     <>
     <AnimatePresence>
